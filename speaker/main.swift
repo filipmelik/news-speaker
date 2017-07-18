@@ -22,6 +22,8 @@ class Speaker: NSObject, MyXMLParserDelegate, NSSpeechSynthesizerDelegate {
         if let url = URL(string: "http://servis.idnes.cz/rss.aspx?c=zpravodaj") {
             speech = NSSpeechSynthesizer(voice: "com.apple.speech.synthesis.voice.zuzana.premium")
             speech.delegate = self
+            speech.volume = 1
+            speech.rate = 195
             
             let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
             self.scriptDir = URL(fileURLWithPath: CommandLine.arguments[0], relativeTo: currentDirectoryURL).deletingLastPathComponent()
