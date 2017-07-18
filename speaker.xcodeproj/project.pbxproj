@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E321EBB41F18BD3200E91522 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EBB31F18BD3200E91522 /* main.swift */; };
+		E321EBBB1F18D39200E91522 /* XmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EBBA1F18D39200E91522 /* XmlParser.swift */; };
+		E321EBBD1F18FB8C00E91522 /* jingle.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E321EBBC1F18FB5E00E91522 /* jingle.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -17,6 +19,7 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
+				E321EBBD1F18FB8C00E91522 /* jingle.mp3 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -25,6 +28,8 @@
 /* Begin PBXFileReference section */
 		E321EBB01F18BD3200E91522 /* speaker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = speaker; sourceTree = BUILT_PRODUCTS_DIR; };
 		E321EBB31F18BD3200E91522 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E321EBBA1F18D39200E91522 /* XmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlParser.swift; sourceTree = "<group>"; };
+		E321EBBC1F18FB5E00E91522 /* jingle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jingle.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +62,9 @@
 		E321EBB21F18BD3200E91522 /* speaker */ = {
 			isa = PBXGroup;
 			children = (
+				E321EBBC1F18FB5E00E91522 /* jingle.mp3 */,
 				E321EBB31F18BD3200E91522 /* main.swift */,
+				E321EBBA1F18D39200E91522 /* XmlParser.swift */,
 			);
 			path = speaker;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E321EBBB1F18D39200E91522 /* XmlParser.swift in Sources */,
 				E321EBB41F18BD3200E91522 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +263,7 @@
 				E321EBB91F18BD3200E91522 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
