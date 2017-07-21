@@ -16,50 +16,104 @@ class Speaker: NSObject, MyXMLParserDelegate, NSSpeechSynthesizerDelegate {
     var speech: NSSpeechSynthesizer!
     var scriptDir: URL!
     
+    // RunLoop wait flag
     var shouldWait = true
     
-    func startFun() {
-        if let url = URL(string: "http://servis.idnes.cz/rss.aspx?c=zpravodaj") {
-            speech = NSSpeechSynthesizer(voice: "com.apple.speech.synthesis.voice.zuzana.premium")
-            speech.delegate = self
-            speech.volume = 1
-            speech.rate = 195
-            
-            let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-            self.scriptDir = URL(fileURLWithPath: CommandLine.arguments[0], relativeTo: currentDirectoryURL).deletingLastPathComponent()
-            
-            xmlParser.delegate = self
-            xmlParser.startParsingWithContentsOfURL(rssURL: url)
-        }
+    
+    override init() {
+        super.init()
+        
+        configureSpeechSynthesiser()
+        self.scriptDir = retrieveScriptDirectory()
     }
     
-    // MARK: MyXMLParserDelegate
     
-    
-    func parsingWasFinished() {
-        let randomArticleIndex = Int(arc4random_uniform(UInt32(7)) + UInt32(2));
-        if let articleTitle = xmlParser.arrParsedData[randomArticleIndex]["title"] {
-            
-            NSSound(contentsOfFile: "\(scriptDir.path)/jingle.mp3", byReference: true)?.play()
-            Thread.sleep(forTimeInterval: 3)
-            
-            speech.startSpeaking(articleTitle)
-            
-            var loopUntil = Date(timeIntervalSinceNow: 0.1)
-            while (shouldWait && RunLoop.current.run(mode: .defaultRunLoopMode, before: loopUntil)) {
-                loopUntil = Date(timeIntervalSinceNow: 0.1)
+    func startFun() {
+        if CommandLine.arguments.count == 2 {
+            let messageToRead = CommandLine.arguments[1] // first argument is the message to read
+            readMessage(messageToRead)
+        } else {
+            if let url = URL(string: "http://servis.idnes.cz/rss.aspx?c=zpravodaj") {
+                xmlParser.delegate = self
+                xmlParser.startParsingWithContentsOfURL(rssURL: url)
             }
         }
     }
     
     
+    //
+    // MARK: MyXMLParserDelegate
+    //
+    
+    
+    func parsingWasFinished() {
+        let randomArticleIndex = Int(arc4random_uniform(UInt32(7)) + UInt32(2));
+        if let articleTitle = xmlParser.arrParsedData[randomArticleIndex]["title"] {
+            readMessage(articleTitle)
+        }
+    }
+    
+    
+    //
+    // MARK: NSSpeechSynthesizerDelegate
+    //
+    
+    
     func speechSynthesizer(_ sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
         if finishedSpeaking {
             Thread.sleep(forTimeInterval: 0.4)
-            NSSound(contentsOfFile: "\(scriptDir.path)/jingleend.mp3", byReference: true)?.play()
-            Thread.sleep(forTimeInterval: 5)
+            playEndingJingle()
+            
+            // This is needed to break the RunLoop that waits until speaking is finished.
             shouldWait = false
         }
+    }
+    
+    
+    //
+    // MARK: Helpers
+    //
+    
+    
+    private func configureSpeechSynthesiser() {
+        speech = NSSpeechSynthesizer(voice: "com.apple.speech.synthesis.voice.zuzana.premium")
+        speech.delegate = self
+        speech.volume = 1
+        speech.rate = 195
+    }
+    
+    
+    private func retrieveScriptDirectory() -> URL {
+        let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+        return URL(fileURLWithPath: CommandLine.arguments[0], relativeTo: currentDirectoryURL).deletingLastPathComponent()
+    }
+    
+    
+    private func waitUntilSpeakingIsFinished() {
+        var loopUntil = Date(timeIntervalSinceNow: 0.1)
+        while (shouldWait && RunLoop.current.run(mode: .defaultRunLoopMode, before: loopUntil)) {
+            loopUntil = Date(timeIntervalSinceNow: 0.1)
+        }
+    }
+    
+    
+    private func readMessage(_ message: String) {
+        playStartJingle()
+        speech.startSpeaking(message)
+        waitUntilSpeakingIsFinished()
+        // ending jingle is played in NSSpeechSynthesizerDelegate method
+    }
+    
+    
+    private func playStartJingle() {
+        NSSound(contentsOfFile: "\(scriptDir.path)/resources/jingle.mp3", byReference: true)?.play()
+        Thread.sleep(forTimeInterval: 3)
+    }
+    
+    
+    private func playEndingJingle() {
+        NSSound(contentsOfFile: "\(scriptDir.path)/resources/jingleend.mp3", byReference: true)?.play()
+        Thread.sleep(forTimeInterval: 5)
     }
     
     
