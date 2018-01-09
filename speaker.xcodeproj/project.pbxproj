@@ -3,36 +3,111 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E321EBB41F18BD3200E91522 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EBB31F18BD3200E91522 /* main.swift */; };
-		E321EBBB1F18D39200E91522 /* XmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321EBBA1F18D39200E91522 /* XmlParser.swift */; };
+		7952A7422000EB6500FAFD69 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F12000EA3600FAFD69 /* main.swift */; };
+		7952A7432000EB6E00FAFD69 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F42000EA8900FAFD69 /* ServerError.swift */; };
+		7952A7442000EB6E00FAFD69 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F52000EA8900FAFD69 /* ErrorHandler.swift */; };
+		7952A7452000EB6E00FAFD69 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F62000EA8900FAFD69 /* Server.swift */; };
+		7952A7462000EB6E00FAFD69 /* ResponseWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F72000EA8900FAFD69 /* ResponseWriter.swift */; };
+		7952A7472000EB6E00FAFD69 /* StaticServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F82000EA8900FAFD69 /* StaticServer.swift */; };
+		7952A7482000EB6E00FAFD69 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F92000EA8900FAFD69 /* Response.swift */; };
+		7952A7492000EB6E00FAFD69 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FA2000EA8900FAFD69 /* File.swift */; };
+		7952A74A2000EB6E00FAFD69 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FB2000EA8900FAFD69 /* Request.swift */; };
+		7952A74B2000EB6E00FAFD69 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FC2000EA8900FAFD69 /* Router.swift */; };
+		7952A74C2000EB6E00FAFD69 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FD2000EA8900FAFD69 /* Regex.swift */; };
+		7952A74D2000EB6E00FAFD69 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FE2000EA8900FAFD69 /* Url.swift */; };
+		7952A74E2000EB6E00FAFD69 /* Server+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FF2000EA8900FAFD69 /* Server+Methods.swift */; };
+		7952A74F2000EB6E00FAFD69 /* RequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7002000EA8900FAFD69 /* RequestParser.swift */; };
+		7952A7502000EB6E00FAFD69 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7012000EA8900FAFD69 /* Helper.swift */; };
+		7952A7522000EB6E00FAFD69 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7032000EA8900FAFD69 /* Route.swift */; };
+		7952A7542000EB7600FAFD69 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7162000EAF100FAFD69 /* Family.swift */; };
+		7952A7552000EB7600FAFD69 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7172000EAF100FAFD69 /* Protocol.swift */; };
+		7952A7562000EB7600FAFD69 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7182000EAF100FAFD69 /* Error.swift */; };
+		7952A7572000EB7600FAFD69 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7192000EAF100FAFD69 /* Option.swift */; };
+		7952A7582000EB7600FAFD69 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71A2000EAF100FAFD69 /* Type.swift */; };
+		7952A7592000EB7600FAFD69 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71B2000EAF100FAFD69 /* OS.swift */; };
+		7952A75B2000EB7600FAFD69 /* TLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71D2000EAF100FAFD69 /* TLS.swift */; };
+		7952A75C2000EB7600FAFD69 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71E2000EAF100FAFD69 /* Socket.swift */; };
+		7952A761200225ED00FAFD69 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A760200225ED00FAFD69 /* Settings.swift */; };
+		7952A76720027BED00FAFD69 /* XmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A76620027BED00FAFD69 /* XmlParser.swift */; };
+		7952A7692002985600FAFD69 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7682002985600FAFD69 /* Speaker.swift */; };
+		7952A78320029B6F00FAFD69 /* jingle.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A77E2002997100FAFD69 /* jingle.mp3 */; };
+		7952A78420029B7A00FAFD69 /* jingleend.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A77F2002997100FAFD69 /* jingleend.mp3 */; };
+		7952A7862002C3F000FAFD69 /* speaker in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A6E72000EA2000FAFD69 /* speaker */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7952A7872002C46100FAFD69 /* Settings.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A75E2002244400FAFD69 /* Settings.plist */; };
+		795357702005517E009B079C /* ServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953576F2005517E009B079C /* ServerHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E321EBAE1F18BD3200E91522 /* CopyFiles */ = {
+		7952A78220029B5800FAFD69 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = /Applications/Speaker/resources;
 			dstSubfolderSpec = 0;
 			files = (
+				7952A78420029B7A00FAFD69 /* jingleend.mp3 in CopyFiles */,
+				7952A78320029B6F00FAFD69 /* jingle.mp3 in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7952A7852002C3E800FAFD69 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = /Applications/Speaker;
+			dstSubfolderSpec = 0;
+			files = (
+				7952A7862002C3F000FAFD69 /* speaker in CopyFiles */,
+				7952A7872002C46100FAFD69 /* Settings.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E321EBB01F18BD3200E91522 /* speaker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = speaker; sourceTree = BUILT_PRODUCTS_DIR; };
-		E321EBB31F18BD3200E91522 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		E321EBBA1F18D39200E91522 /* XmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlParser.swift; sourceTree = "<group>"; };
-		E35BC4251F21F5490073AEBB /* jingle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = jingle.mp3; path = resources/jingle.mp3; sourceTree = "<group>"; };
-		E35BC4261F21F5490073AEBB /* jingleend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = jingleend.mp3; path = resources/jingleend.mp3; sourceTree = "<group>"; };
+		7952A6E72000EA2000FAFD69 /* speaker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = speaker; sourceTree = BUILT_PRODUCTS_DIR; };
+		7952A6F12000EA3600FAFD69 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7952A6F42000EA8900FAFD69 /* ServerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		7952A6F52000EA8900FAFD69 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		7952A6F62000EA8900FAFD69 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		7952A6F72000EA8900FAFD69 /* ResponseWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseWriter.swift; sourceTree = "<group>"; };
+		7952A6F82000EA8900FAFD69 /* StaticServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticServer.swift; sourceTree = "<group>"; };
+		7952A6F92000EA8900FAFD69 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		7952A6FA2000EA8900FAFD69 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		7952A6FB2000EA8900FAFD69 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		7952A6FC2000EA8900FAFD69 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7952A6FD2000EA8900FAFD69 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		7952A6FE2000EA8900FAFD69 /* Url.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		7952A6FF2000EA8900FAFD69 /* Server+Methods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Server+Methods.swift"; sourceTree = "<group>"; };
+		7952A7002000EA8900FAFD69 /* RequestParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParser.swift; sourceTree = "<group>"; };
+		7952A7012000EA8900FAFD69 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		7952A7022000EA8900FAFD69 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7952A7032000EA8900FAFD69 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		7952A7042000EA8900FAFD69 /* HttpSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpSwift.h; sourceTree = "<group>"; };
+		7952A7152000EAF100FAFD69 /* SocketSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketSwift.h; sourceTree = "<group>"; };
+		7952A7162000EAF100FAFD69 /* Family.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
+		7952A7172000EAF100FAFD69 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		7952A7182000EAF100FAFD69 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		7952A7192000EAF100FAFD69 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		7952A71A2000EAF100FAFD69 /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		7952A71B2000EAF100FAFD69 /* OS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OS.swift; sourceTree = "<group>"; };
+		7952A71C2000EAF100FAFD69 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7952A71D2000EAF100FAFD69 /* TLS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLS.swift; sourceTree = "<group>"; };
+		7952A71E2000EAF100FAFD69 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		7952A75E2002244400FAFD69 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		7952A75F2002247E00FAFD69 /* com.heureka.speaker.agent.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.heureka.speaker.agent.plist; sourceTree = "<group>"; };
+		7952A760200225ED00FAFD69 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		7952A76620027BED00FAFD69 /* XmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlParser.swift; sourceTree = "<group>"; };
+		7952A7682002985600FAFD69 /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		7952A77E2002997100FAFD69 /* jingle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jingle.mp3; sourceTree = "<group>"; };
+		7952A77F2002997100FAFD69 /* jingleend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jingleend.mp3; sourceTree = "<group>"; };
+		7953576F2005517E009B079C /* ServerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E321EBAD1F18BD3200E91522 /* Frameworks */ = {
+		7952A6E42000EA2000FAFD69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,51 +117,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E321EBA71F18BD3200E91522 = {
+		7952A6DE2000EA2000FAFD69 = {
 			isa = PBXGroup;
 			children = (
-				E321EBB21F18BD3200E91522 /* speaker */,
-				E321EBB11F18BD3200E91522 /* Products */,
+				7952A6E92000EA2000FAFD69 /* speaker */,
+				7952A6E82000EA2000FAFD69 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E321EBB11F18BD3200E91522 /* Products */ = {
+		7952A6E82000EA2000FAFD69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E321EBB01F18BD3200E91522 /* speaker */,
+				7952A6E72000EA2000FAFD69 /* speaker */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E321EBB21F18BD3200E91522 /* speaker */ = {
+		7952A6E92000EA2000FAFD69 /* speaker */ = {
 			isa = PBXGroup;
 			children = (
-				E35BC4241F21F51F0073AEBB /* resources */,
-				E321EBB31F18BD3200E91522 /* main.swift */,
-				E321EBBA1F18D39200E91522 /* XmlParser.swift */,
+				7952A77D2002997100FAFD69 /* resources */,
+				7952A7142000EAF100FAFD69 /* Socket */,
+				7952A6F32000EA8900FAFD69 /* Http */,
+				7952A6F12000EA3600FAFD69 /* main.swift */,
+				7953576F2005517E009B079C /* ServerHandler.swift */,
+				7952A760200225ED00FAFD69 /* Settings.swift */,
+				7952A7682002985600FAFD69 /* Speaker.swift */,
+				7952A76620027BED00FAFD69 /* XmlParser.swift */,
+				7952A75E2002244400FAFD69 /* Settings.plist */,
+				7952A75F2002247E00FAFD69 /* com.heureka.speaker.agent.plist */,
 			);
 			path = speaker;
 			sourceTree = "<group>";
 		};
-		E35BC4241F21F51F0073AEBB /* resources */ = {
+		7952A6F32000EA8900FAFD69 /* Http */ = {
 			isa = PBXGroup;
 			children = (
-				E35BC4251F21F5490073AEBB /* jingle.mp3 */,
-				E35BC4261F21F5490073AEBB /* jingleend.mp3 */,
+				7952A6F42000EA8900FAFD69 /* ServerError.swift */,
+				7952A6F52000EA8900FAFD69 /* ErrorHandler.swift */,
+				7952A6F62000EA8900FAFD69 /* Server.swift */,
+				7952A6F72000EA8900FAFD69 /* ResponseWriter.swift */,
+				7952A6F82000EA8900FAFD69 /* StaticServer.swift */,
+				7952A6F92000EA8900FAFD69 /* Response.swift */,
+				7952A6FA2000EA8900FAFD69 /* File.swift */,
+				7952A6FB2000EA8900FAFD69 /* Request.swift */,
+				7952A6FC2000EA8900FAFD69 /* Router.swift */,
+				7952A6FD2000EA8900FAFD69 /* Regex.swift */,
+				7952A6FE2000EA8900FAFD69 /* Url.swift */,
+				7952A6FF2000EA8900FAFD69 /* Server+Methods.swift */,
+				7952A7002000EA8900FAFD69 /* RequestParser.swift */,
+				7952A7012000EA8900FAFD69 /* Helper.swift */,
+				7952A7022000EA8900FAFD69 /* Info.plist */,
+				7952A7032000EA8900FAFD69 /* Route.swift */,
+				7952A7042000EA8900FAFD69 /* HttpSwift.h */,
 			);
-			name = resources;
+			path = Http;
+			sourceTree = "<group>";
+		};
+		7952A7142000EAF100FAFD69 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				7952A7152000EAF100FAFD69 /* SocketSwift.h */,
+				7952A7162000EAF100FAFD69 /* Family.swift */,
+				7952A7172000EAF100FAFD69 /* Protocol.swift */,
+				7952A7182000EAF100FAFD69 /* Error.swift */,
+				7952A7192000EAF100FAFD69 /* Option.swift */,
+				7952A71A2000EAF100FAFD69 /* Type.swift */,
+				7952A71B2000EAF100FAFD69 /* OS.swift */,
+				7952A71C2000EAF100FAFD69 /* Info.plist */,
+				7952A71D2000EAF100FAFD69 /* TLS.swift */,
+				7952A71E2000EAF100FAFD69 /* Socket.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		7952A77D2002997100FAFD69 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				7952A77E2002997100FAFD69 /* jingle.mp3 */,
+				7952A77F2002997100FAFD69 /* jingleend.mp3 */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E321EBAF1F18BD3200E91522 /* speaker */ = {
+		7952A6E62000EA2000FAFD69 /* speaker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E321EBB71F18BD3200E91522 /* Build configuration list for PBXNativeTarget "speaker" */;
+			buildConfigurationList = 7952A6EE2000EA2000FAFD69 /* Build configuration list for PBXNativeTarget "speaker" */;
 			buildPhases = (
-				E321EBAC1F18BD3200E91522 /* Sources */,
-				E321EBAD1F18BD3200E91522 /* Frameworks */,
-				E321EBAE1F18BD3200E91522 /* CopyFiles */,
+				7952A6E32000EA2000FAFD69 /* Sources */,
+				7952A6E42000EA2000FAFD69 /* Frameworks */,
+				7952A7852002C3E800FAFD69 /* CopyFiles */,
+				7952A78220029B5800FAFD69 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -94,67 +218,95 @@
 			);
 			name = speaker;
 			productName = speaker;
-			productReference = E321EBB01F18BD3200E91522 /* speaker */;
+			productReference = 7952A6E72000EA2000FAFD69 /* speaker */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E321EBA81F18BD3200E91522 /* Project object */ = {
+		7952A6DF2000EA2000FAFD69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Filip Melik";
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Heureka;
 				TargetAttributes = {
-					E321EBAF1F18BD3200E91522 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = D9AU8JZXS2;
+					7952A6E62000EA2000FAFD69 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = E321EBAB1F18BD3200E91522 /* Build configuration list for PBXProject "speaker" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 7952A6E22000EA2000FAFD69 /* Build configuration list for PBXProject "speaker" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E321EBA71F18BD3200E91522;
-			productRefGroup = E321EBB11F18BD3200E91522 /* Products */;
+			mainGroup = 7952A6DE2000EA2000FAFD69;
+			productRefGroup = 7952A6E82000EA2000FAFD69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E321EBAF1F18BD3200E91522 /* speaker */,
+				7952A6E62000EA2000FAFD69 /* speaker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E321EBAC1F18BD3200E91522 /* Sources */ = {
+		7952A6E32000EA2000FAFD69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E321EBBB1F18D39200E91522 /* XmlParser.swift in Sources */,
-				E321EBB41F18BD3200E91522 /* main.swift in Sources */,
+				7952A7542000EB7600FAFD69 /* Family.swift in Sources */,
+				7952A7552000EB7600FAFD69 /* Protocol.swift in Sources */,
+				7952A7562000EB7600FAFD69 /* Error.swift in Sources */,
+				7952A7572000EB7600FAFD69 /* Option.swift in Sources */,
+				7952A7582000EB7600FAFD69 /* Type.swift in Sources */,
+				7952A7592000EB7600FAFD69 /* OS.swift in Sources */,
+				7952A75B2000EB7600FAFD69 /* TLS.swift in Sources */,
+				7952A75C2000EB7600FAFD69 /* Socket.swift in Sources */,
+				7952A7432000EB6E00FAFD69 /* ServerError.swift in Sources */,
+				7952A7442000EB6E00FAFD69 /* ErrorHandler.swift in Sources */,
+				7952A7692002985600FAFD69 /* Speaker.swift in Sources */,
+				7952A7452000EB6E00FAFD69 /* Server.swift in Sources */,
+				7952A7462000EB6E00FAFD69 /* ResponseWriter.swift in Sources */,
+				7952A7472000EB6E00FAFD69 /* StaticServer.swift in Sources */,
+				7952A7482000EB6E00FAFD69 /* Response.swift in Sources */,
+				7952A7492000EB6E00FAFD69 /* File.swift in Sources */,
+				7952A74A2000EB6E00FAFD69 /* Request.swift in Sources */,
+				7952A761200225ED00FAFD69 /* Settings.swift in Sources */,
+				7952A74B2000EB6E00FAFD69 /* Router.swift in Sources */,
+				7952A74C2000EB6E00FAFD69 /* Regex.swift in Sources */,
+				7952A74D2000EB6E00FAFD69 /* Url.swift in Sources */,
+				795357702005517E009B079C /* ServerHandler.swift in Sources */,
+				7952A74E2000EB6E00FAFD69 /* Server+Methods.swift in Sources */,
+				7952A74F2000EB6E00FAFD69 /* RequestParser.swift in Sources */,
+				7952A7502000EB6E00FAFD69 /* Helper.swift in Sources */,
+				7952A7522000EB6E00FAFD69 /* Route.swift in Sources */,
+				7952A76720027BED00FAFD69 /* XmlParser.swift in Sources */,
+				7952A7422000EB6500FAFD69 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		E321EBB51F18BD3200E91522 /* Debug */ = {
+		7952A6EC2000EA2000FAFD69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -162,16 +314,21 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -185,25 +342,28 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		E321EBB61F18BD3200E91522 /* Release */ = {
+		7952A6ED2000EA2000FAFD69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -211,16 +371,21 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -228,52 +393,62 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
-		E321EBB81F18BD3200E91522 /* Debug */ = {
+		7952A6EF2000EA2000FAFD69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = D9AU8JZXS2;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PD7JLCFGK9;
+				LD_RUNPATH_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		E321EBB91F18BD3200E91522 /* Release */ = {
+		7952A6F02000EA2000FAFD69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = D9AU8JZXS2;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PD7JLCFGK9;
+				LD_RUNPATH_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E321EBAB1F18BD3200E91522 /* Build configuration list for PBXProject "speaker" */ = {
+		7952A6E22000EA2000FAFD69 /* Build configuration list for PBXProject "speaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E321EBB51F18BD3200E91522 /* Debug */,
-				E321EBB61F18BD3200E91522 /* Release */,
+				7952A6EC2000EA2000FAFD69 /* Debug */,
+				7952A6ED2000EA2000FAFD69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E321EBB71F18BD3200E91522 /* Build configuration list for PBXNativeTarget "speaker" */ = {
+		7952A6EE2000EA2000FAFD69 /* Build configuration list for PBXNativeTarget "speaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E321EBB81F18BD3200E91522 /* Debug */,
-				E321EBB91F18BD3200E91522 /* Release */,
+				7952A6EF2000EA2000FAFD69 /* Debug */,
+				7952A6F02000EA2000FAFD69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E321EBA81F18BD3200E91522 /* Project object */;
+	rootObject = 7952A6DF2000EA2000FAFD69 /* Project object */;
 }

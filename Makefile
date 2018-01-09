@@ -1,16 +1,12 @@
-INSTALL_DIR=~/news-speaker
-
 clean:
 	rm -rf ./build/
 
 install: speaker.xcodeproj
 	xcodebuild
-	mkdir -p $(INSTALL_DIR)
-	mkdir -p $(INSTALL_DIR)/resources
-	cp ./speaker/resources/jingle.mp3 $(INSTALL_DIR)/resources
-	cp ./speaker/resources/jingleend.mp3 $(INSTALL_DIR)/resources
-	cp ./build/Release/speaker $(INSTALL_DIR)/speaker
-	chmod +x $(INSTALL_DIR)/speaker
+	sudo cp speaker/com.heureka.speaker.agent.plist /Library/LaunchAgents
+	launchctl load /Library/LaunchAgents/com.heureka.speaker.agent.plist
 
-uninstall: 
-	rm -rf $(INSTALL_DIR)
+uninstall:
+	launchctl unload /Library/LaunchAgents/com.heureka.speaker.agent.plist
+	rm -rf /Applications/Speaker
+	sudo rm -f /Library/LaunchAgents/com.heureka.speaker.agent.plist
