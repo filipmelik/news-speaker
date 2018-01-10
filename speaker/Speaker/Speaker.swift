@@ -28,11 +28,11 @@ class Speaker: NSObject, NSSpeechSynthesizerDelegate, MyXMLParserDelegate {
         xmlParser.delegate = self
         
         //Start jingle
-        let pathStartJingle = FileManager.default.currentDirectoryPath.appendingPathComponent("resources/jingle.mp3")
+        let pathStartJingle = FileManager.default.currentDirectoryPath.appendingPathComponent("Resources/jingle.mp3")
         startJingleSound = NSSound(contentsOfFile: pathStartJingle, byReference: true)
         
         //end jingle
-        let pathEndJingle = FileManager.default.currentDirectoryPath.appendingPathComponent("resources/jingleend.mp3")
+        let pathEndJingle = FileManager.default.currentDirectoryPath.appendingPathComponent("Resources/jingleend.mp3")
         endJingleSound = NSSound(contentsOfFile: pathEndJingle, byReference: true)
         
         //configure synthetizer with stored or default settings

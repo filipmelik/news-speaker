@@ -4,8 +4,8 @@ This LaunchAgent uses native macOS speech synthetiser to either read random news
 
 # Installation
 You need to have Xcode IDE installed on your mac.
-Just type `make install`. Installation directory is `Applications/Speaker`.  Installation Makefile uses sudo. After the installation, agent is automatically loaded.
-For uninstallation, just type `make uninstall`
+Just type `sudo make install`. Installation directory is `Applications/Speaker`.  Installation Makefile uses sudo. After the installation, agent is automatically loaded.
+For uninstallation, just type `sudo make uninstall`. Root privileges for `make` are needed to write `plist` into `/Library/LaunchAgents` (deploy agent).
 
 # Using the speaker
 You can communicate with the app using HTTP API. Default address is `http://localhost:8080/`.

@@ -3,10 +3,10 @@ clean:
 
 install: speaker.xcodeproj
 	xcodebuild
-	sudo cp speaker/com.heureka.speaker.agent.plist /Library/LaunchAgents
+	cp speaker/Plists/com.heureka.speaker.agent.plist /Library/LaunchAgents
 	launchctl load /Library/LaunchAgents/com.heureka.speaker.agent.plist
 
 uninstall:
 	launchctl unload /Library/LaunchAgents/com.heureka.speaker.agent.plist
 	rm -rf /Applications/Speaker
-	sudo rm -f /Library/LaunchAgents/com.heureka.speaker.agent.plist
+	rm -f /Library/LaunchAgents/com.heureka.speaker.agent.plist

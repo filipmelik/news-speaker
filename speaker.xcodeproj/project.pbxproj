@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7952A7422000EB6500FAFD69 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F12000EA3600FAFD69 /* main.swift */; };
 		7952A7432000EB6E00FAFD69 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F42000EA8900FAFD69 /* ServerError.swift */; };
 		7952A7442000EB6E00FAFD69 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F52000EA8900FAFD69 /* ErrorHandler.swift */; };
 		7952A7452000EB6E00FAFD69 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F62000EA8900FAFD69 /* Server.swift */; };
@@ -31,21 +30,22 @@
 		7952A7592000EB7600FAFD69 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71B2000EAF100FAFD69 /* OS.swift */; };
 		7952A75B2000EB7600FAFD69 /* TLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71D2000EAF100FAFD69 /* TLS.swift */; };
 		7952A75C2000EB7600FAFD69 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71E2000EAF100FAFD69 /* Socket.swift */; };
-		7952A761200225ED00FAFD69 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A760200225ED00FAFD69 /* Settings.swift */; };
-		7952A76720027BED00FAFD69 /* XmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A76620027BED00FAFD69 /* XmlParser.swift */; };
-		7952A7692002985600FAFD69 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7682002985600FAFD69 /* Speaker.swift */; };
 		7952A78320029B6F00FAFD69 /* jingle.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A77E2002997100FAFD69 /* jingle.mp3 */; };
 		7952A78420029B7A00FAFD69 /* jingleend.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A77F2002997100FAFD69 /* jingleend.mp3 */; };
 		7952A7862002C3F000FAFD69 /* speaker in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A6E72000EA2000FAFD69 /* speaker */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		7952A7872002C46100FAFD69 /* Settings.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A75E2002244400FAFD69 /* Settings.plist */; };
-		795357702005517E009B079C /* ServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953576F2005517E009B079C /* ServerHandler.swift */; };
+		79ADB30520069FDA001FE901 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30020069FDA001FE901 /* Speaker.swift */; };
+		79ADB30620069FDA001FE901 /* ServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30120069FDA001FE901 /* ServerHandler.swift */; };
+		79ADB30720069FDA001FE901 /* XmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30220069FDA001FE901 /* XmlParser.swift */; };
+		79ADB30820069FDA001FE901 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30320069FDA001FE901 /* Settings.swift */; };
+		79ADB30920069FDA001FE901 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30420069FDA001FE901 /* main.swift */; };
+		79ADB30D2006A1FC001FE901 /* Settings.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79ADB30C2006A022001FE901 /* Settings.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7952A78220029B5800FAFD69 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
-			dstPath = /Applications/Speaker/resources;
+			dstPath = /Applications/Speaker/Resources;
 			dstSubfolderSpec = 0;
 			files = (
 				7952A78420029B7A00FAFD69 /* jingleend.mp3 in CopyFiles */,
@@ -59,8 +59,8 @@
 			dstPath = /Applications/Speaker;
 			dstSubfolderSpec = 0;
 			files = (
+				79ADB30D2006A1FC001FE901 /* Settings.plist in CopyFiles */,
 				7952A7862002C3F000FAFD69 /* speaker in CopyFiles */,
-				7952A7872002C46100FAFD69 /* Settings.plist in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,6 @@
 
 /* Begin PBXFileReference section */
 		7952A6E72000EA2000FAFD69 /* speaker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = speaker; sourceTree = BUILT_PRODUCTS_DIR; };
-		7952A6F12000EA3600FAFD69 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7952A6F42000EA8900FAFD69 /* ServerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		7952A6F52000EA8900FAFD69 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		7952A6F62000EA8900FAFD69 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
@@ -96,14 +95,15 @@
 		7952A71C2000EAF100FAFD69 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7952A71D2000EAF100FAFD69 /* TLS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLS.swift; sourceTree = "<group>"; };
 		7952A71E2000EAF100FAFD69 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
-		7952A75E2002244400FAFD69 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
-		7952A75F2002247E00FAFD69 /* com.heureka.speaker.agent.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.heureka.speaker.agent.plist; sourceTree = "<group>"; };
-		7952A760200225ED00FAFD69 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		7952A76620027BED00FAFD69 /* XmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlParser.swift; sourceTree = "<group>"; };
-		7952A7682002985600FAFD69 /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		7952A77E2002997100FAFD69 /* jingle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jingle.mp3; sourceTree = "<group>"; };
 		7952A77F2002997100FAFD69 /* jingleend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jingleend.mp3; sourceTree = "<group>"; };
-		7953576F2005517E009B079C /* ServerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerHandler.swift; sourceTree = "<group>"; };
+		79ADB30020069FDA001FE901 /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		79ADB30120069FDA001FE901 /* ServerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerHandler.swift; sourceTree = "<group>"; };
+		79ADB30220069FDA001FE901 /* XmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlParser.swift; sourceTree = "<group>"; };
+		79ADB30320069FDA001FE901 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		79ADB30420069FDA001FE901 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		79ADB30B2006A022001FE901 /* com.heureka.speaker.agent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = com.heureka.speaker.agent.plist; sourceTree = "<group>"; };
+		79ADB30C2006A022001FE901 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,16 +136,11 @@
 		7952A6E92000EA2000FAFD69 /* speaker */ = {
 			isa = PBXGroup;
 			children = (
-				7952A77D2002997100FAFD69 /* resources */,
-				7952A7142000EAF100FAFD69 /* Socket */,
 				7952A6F32000EA8900FAFD69 /* Http */,
-				7952A6F12000EA3600FAFD69 /* main.swift */,
-				7953576F2005517E009B079C /* ServerHandler.swift */,
-				7952A760200225ED00FAFD69 /* Settings.swift */,
-				7952A7682002985600FAFD69 /* Speaker.swift */,
-				7952A76620027BED00FAFD69 /* XmlParser.swift */,
-				7952A75E2002244400FAFD69 /* Settings.plist */,
-				7952A75F2002247E00FAFD69 /* com.heureka.speaker.agent.plist */,
+				79ADB30A20069FEF001FE901 /* Plists */,
+				7952A77D2002997100FAFD69 /* Resources */,
+				7952A7142000EAF100FAFD69 /* Socket */,
+				79ADB2FF20069FDA001FE901 /* Speaker */,
 			);
 			path = speaker;
 			sourceTree = "<group>";
@@ -191,13 +186,34 @@
 			path = Socket;
 			sourceTree = "<group>";
 		};
-		7952A77D2002997100FAFD69 /* resources */ = {
+		7952A77D2002997100FAFD69 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				7952A77E2002997100FAFD69 /* jingle.mp3 */,
 				7952A77F2002997100FAFD69 /* jingleend.mp3 */,
 			);
-			path = resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		79ADB2FF20069FDA001FE901 /* Speaker */ = {
+			isa = PBXGroup;
+			children = (
+				79ADB30020069FDA001FE901 /* Speaker.swift */,
+				79ADB30120069FDA001FE901 /* ServerHandler.swift */,
+				79ADB30220069FDA001FE901 /* XmlParser.swift */,
+				79ADB30320069FDA001FE901 /* Settings.swift */,
+				79ADB30420069FDA001FE901 /* main.swift */,
+			);
+			path = Speaker;
+			sourceTree = "<group>";
+		};
+		79ADB30A20069FEF001FE901 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				79ADB30B2006A022001FE901 /* com.heureka.speaker.agent.plist */,
+				79ADB30C2006A022001FE901 /* Settings.plist */,
+			);
+			path = Plists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,24 +286,24 @@
 				7952A75C2000EB7600FAFD69 /* Socket.swift in Sources */,
 				7952A7432000EB6E00FAFD69 /* ServerError.swift in Sources */,
 				7952A7442000EB6E00FAFD69 /* ErrorHandler.swift in Sources */,
-				7952A7692002985600FAFD69 /* Speaker.swift in Sources */,
 				7952A7452000EB6E00FAFD69 /* Server.swift in Sources */,
 				7952A7462000EB6E00FAFD69 /* ResponseWriter.swift in Sources */,
 				7952A7472000EB6E00FAFD69 /* StaticServer.swift in Sources */,
 				7952A7482000EB6E00FAFD69 /* Response.swift in Sources */,
 				7952A7492000EB6E00FAFD69 /* File.swift in Sources */,
 				7952A74A2000EB6E00FAFD69 /* Request.swift in Sources */,
-				7952A761200225ED00FAFD69 /* Settings.swift in Sources */,
+				79ADB30520069FDA001FE901 /* Speaker.swift in Sources */,
 				7952A74B2000EB6E00FAFD69 /* Router.swift in Sources */,
 				7952A74C2000EB6E00FAFD69 /* Regex.swift in Sources */,
 				7952A74D2000EB6E00FAFD69 /* Url.swift in Sources */,
-				795357702005517E009B079C /* ServerHandler.swift in Sources */,
 				7952A74E2000EB6E00FAFD69 /* Server+Methods.swift in Sources */,
 				7952A74F2000EB6E00FAFD69 /* RequestParser.swift in Sources */,
 				7952A7502000EB6E00FAFD69 /* Helper.swift in Sources */,
+				79ADB30820069FDA001FE901 /* Settings.swift in Sources */,
 				7952A7522000EB6E00FAFD69 /* Route.swift in Sources */,
-				7952A76720027BED00FAFD69 /* XmlParser.swift in Sources */,
-				7952A7422000EB6500FAFD69 /* main.swift in Sources */,
+				79ADB30720069FDA001FE901 /* XmlParser.swift in Sources */,
+				79ADB30920069FDA001FE901 /* main.swift in Sources */,
+				79ADB30620069FDA001FE901 /* ServerHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
