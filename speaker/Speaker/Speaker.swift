@@ -97,6 +97,11 @@ class Speaker: NSObject, NSSpeechSynthesizerDelegate, MyXMLParserDelegate {
         speech.startSpeaking(message)
     }
     
+    func sayError(error: String, message: String) {
+        NSLog("%@", error)
+        speak(message: message)
+    }
+    
     //start parsing xml from rss feed
     func readRss() -> Bool{
         if (settings.rss != nil) {
@@ -148,12 +153,14 @@ class Speaker: NSObject, NSSpeechSynthesizerDelegate, MyXMLParserDelegate {
             speak(message: articleTitle)
         } else {
             //unable to read the article
-            speak(message: "Obsah RSS fídu nebo jeho adresa není validní")
+            sayError(error: "RSS feed format or its address is not valid.",
+                     message: "Obsah RSS fídu nebo jeho adresa není validní")
         }
     }
     
     //Parsing of xml finished with error
     func parsingFinishedWithError() {
-        speak(message: "Obsah RSS fídu nebo jeho adresa není validní")
+        sayError(error: "RSS feed format or its address is not valid.",
+                 message: "Obsah RSS fídu nebo jeho adresa není validní")
     }
 }

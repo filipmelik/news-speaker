@@ -84,7 +84,8 @@ class ServerHandler: NSObject {
             if (!self.speaker.readRss()) {
                 
                 //unable to read rss
-                self.speaker.speak(message: "Není nastavena adresa RSS fídu")
+                self.speaker.sayError(error: "RSS feed address is nots set.",
+                                      message: "Není nastavena adresa RSS fídu")
                 result = "Address of RSS feed is not set. Use /set or modify Settings.plist \n"
                 
             } else {

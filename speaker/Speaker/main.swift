@@ -8,8 +8,17 @@
 
 import Foundation
 
+func parseCommandLineArguments () -> String? {
+    if (CommandLine.arguments.count >= 2) {
+        return CommandLine.arguments[1]
+    }
+    
+    return nil
+}
+
+let settingsPath = parseCommandLineArguments()
 //load settings from Settings.plist
-let settings = Settings()
+let settings = Settings(plistPath: settingsPath)
 
 //create speaker instance
 let speaker = Speaker(settings: settings)
@@ -30,7 +39,8 @@ while (running && RunLoop.current.run(mode: .defaultRunLoopMode, before: loopUnt
     
     //check if server is running
     if (!serverHandler.isRunning()) {
-        speaker.speak(message: "Server se nepodařilo spustit. Zkuste nastavit jiný port.")
+        speaker.sayError(error: "Unable to launch server, try to set anothet port",
+                         message: "Server se nepodařilo spustit. Zkuste nastavit jiný port.")
         Thread.sleep(forTimeInterval: 5)
         
         //server is not running -> stop the service

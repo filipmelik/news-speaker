@@ -38,7 +38,10 @@
 		79ADB30720069FDA001FE901 /* XmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30220069FDA001FE901 /* XmlParser.swift */; };
 		79ADB30820069FDA001FE901 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30320069FDA001FE901 /* Settings.swift */; };
 		79ADB30920069FDA001FE901 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30420069FDA001FE901 /* main.swift */; };
-		79ADB30D2006A1FC001FE901 /* Settings.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79ADB30C2006A022001FE901 /* Settings.plist */; };
+		79ADB30D2006A1FC001FE901 /* defaultSettings.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79ADB30C2006A022001FE901 /* defaultSettings.plist */; };
+		79DC31532008FA260018B9A4 /* jingle.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A77E2002997100FAFD69 /* jingle.mp3 */; };
+		79DC31542008FA2A0018B9A4 /* jingleend.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A77F2002997100FAFD69 /* jingleend.mp3 */; };
+		79DC31562008FA4B0018B9A4 /* defaultSettings.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79ADB30C2006A022001FE901 /* defaultSettings.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,8 +62,29 @@
 			dstPath = /Applications/Speaker;
 			dstSubfolderSpec = 0;
 			files = (
-				79ADB30D2006A1FC001FE901 /* Settings.plist in CopyFiles */,
+				79ADB30D2006A1FC001FE901 /* defaultSettings.plist in CopyFiles */,
 				7952A7862002C3F000FAFD69 /* speaker in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79DC31522008F9FB0018B9A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Resources;
+			dstSubfolderSpec = 6;
+			files = (
+				79DC31532008FA260018B9A4 /* jingle.mp3 in CopyFiles */,
+				79DC31542008FA2A0018B9A4 /* jingleend.mp3 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79DC31552008FA360018B9A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				79DC31562008FA4B0018B9A4 /* defaultSettings.plist in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +127,7 @@
 		79ADB30320069FDA001FE901 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		79ADB30420069FDA001FE901 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		79ADB30B2006A022001FE901 /* com.heureka.speaker.agent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = com.heureka.speaker.agent.plist; sourceTree = "<group>"; };
-		79ADB30C2006A022001FE901 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		79ADB30C2006A022001FE901 /* defaultSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = defaultSettings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				79ADB30B2006A022001FE901 /* com.heureka.speaker.agent.plist */,
-				79ADB30C2006A022001FE901 /* Settings.plist */,
+				79ADB30C2006A022001FE901 /* defaultSettings.plist */,
 			);
 			path = Plists;
 			sourceTree = "<group>";
@@ -227,6 +251,8 @@
 				7952A6E42000EA2000FAFD69 /* Frameworks */,
 				7952A7852002C3E800FAFD69 /* CopyFiles */,
 				7952A78220029B5800FAFD69 /* CopyFiles */,
+				79DC31522008F9FB0018B9A4 /* CopyFiles */,
+				79DC31552008FA360018B9A4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
