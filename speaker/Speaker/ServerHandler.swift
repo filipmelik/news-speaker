@@ -31,6 +31,7 @@ class ServerHandler: NSObject {
         //Set server requests handlers
         setHelpFunction()
         setSayFunction()
+        setSayPostFunction()
         setReadRssFunction()
         setStoreFunction()
         setRestartFunction()
@@ -41,17 +42,22 @@ class ServerHandler: NSObject {
     private func setHelpFunction() {
         server.get("/help") { _ in
             let help = """
-               /say/{text}               - Read given text. Words are separated by \"-\".
-               /read-rss                 - Read random article title from set RSS feed.
-               /set                      - Change and store configuration of the speaker.
-                                           Usage example: /set?voice=jorge, /set?volume=0.8&rate=170
-                    ?voice={voice-name}  - Speaker voice (see /voices for all available options)
-                    ?rate={rate}         - The synthesizer's speaking rate (words per minute) expressed in floating-point unit.
-                                           Average human speech occurs at a rate of 180 to 220 words per minute.
-                    ?volume={volume}     - The synthesizer's speaking volume is expressed in floating-point unit ranging from 0.0 through 1.0.
-               /voices                   - Show all available voices
-               /restart                  - Shutdown and restart the daemon
-               /help                     - Show this page
+                GET requests:
+                   /say/{text}               - Read given text. Words are separated by \"-\".
+                   /read-rss                 - Read random article title from set RSS feed.
+                   /set                      - Change configuration of the speaker.
+                                                Usage example: /set?voice=jorge, /set?volume=0.8&rate=170
+                        ?voice={voice-name}  - Speaker voice (see /voices for all available options)
+                        ?rate={rate}         - The synthesizer's speaking rate (words per minute) expressed in floating-point unit.
+                                                Average human speech occurs at a rate of 180 to 220 words per minute.
+                        ?volume={volume}     - The synthesizer's speaking volume is expressed in floating-point unit ranging from 0.0 through 1.0.
+                   /voices                   - Show all available voices
+                   /restart                  - Shutdown and restart the daemon
+                   /help                     - Show this page
+
+                POST requests:
+                   /say                      - Read given text in POST body, using the content-type application/x-www-form-urlencoded.
+                                                Usage example: curl -d "This is test."  http://localhost:8080/say
                """
             return .ok(help)
         }
@@ -71,6 +77,23 @@ class ServerHandler: NSObject {
             
             //synthetize the message
             self.speaker.speak(message: textSeparated)
+            
+            return .ok(result)
+        }
+    }
+    
+    //Set handler for '/say' POST function
+    private func setSayPostFunction() {
+        server.post("/say") { request in
+            var result = ""
+            
+            let text = String.init(bytes: request.body, encoding: String.Encoding.utf8)
+            if let text = text {
+                self.speaker.speak(message: text)
+                result += "Saying: " + text
+            } else {
+                result += "Unable to find valid text in POST body. Use content-type application/x-www-form-urlencoded"
+            }
             
             return .ok(result)
         }
@@ -96,7 +119,7 @@ class ServerHandler: NSObject {
         }
     }
     
-    //set handler for '/set' function - set various settings into Settings.plist
+    //set handler for '/set' function - set various settings
     private func setStoreFunction() {
         server.get("/set") { request in
             var result = ""
@@ -139,13 +162,6 @@ class ServerHandler: NSObject {
                 } else {
                     result += "RSS could not be changed, use valid URL.\n"
                 }
-            }
-            
-            //set settings into plist
-            if (!self.speaker.setCurrentConfigIntoSettings()) {
-                result += "\nCurrent setting could not be saved. Try again\n"
-            } else {
-                result += "\nCurrent setting saved.\n"
             }
             
             return .ok(result)

@@ -42,6 +42,41 @@
 		79DC31532008FA260018B9A4 /* jingle.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A77E2002997100FAFD69 /* jingle.mp3 */; };
 		79DC31542008FA2A0018B9A4 /* jingleend.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7952A77F2002997100FAFD69 /* jingleend.mp3 */; };
 		79DC31562008FA4B0018B9A4 /* defaultSettings.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79ADB30C2006A022001FE901 /* defaultSettings.plist */; };
+		79DC3158200A4E050018B9A4 /* SettingsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC3157200A4E050018B9A4 /* SettingsLoader.swift */; };
+		79DC3163200A57320018B9A4 /* speakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC3162200A57320018B9A4 /* speakerTests.swift */; };
+		79DC3169200A585C0018B9A4 /* validSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79DC3168200A585C0018B9A4 /* validSettings.plist */; };
+		79DC316A200A58FC0018B9A4 /* SettingsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC3157200A4E050018B9A4 /* SettingsLoader.swift */; };
+		79DC316B200A59570018B9A4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30320069FDA001FE901 /* Settings.swift */; };
+		79DC316C200A59CD0018B9A4 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F42000EA8900FAFD69 /* ServerError.swift */; };
+		79DC316D200A59CD0018B9A4 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F52000EA8900FAFD69 /* ErrorHandler.swift */; };
+		79DC316E200A59CD0018B9A4 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F62000EA8900FAFD69 /* Server.swift */; };
+		79DC316F200A59CD0018B9A4 /* ResponseWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F72000EA8900FAFD69 /* ResponseWriter.swift */; };
+		79DC3170200A59CD0018B9A4 /* StaticServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F82000EA8900FAFD69 /* StaticServer.swift */; };
+		79DC3171200A59CD0018B9A4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6F92000EA8900FAFD69 /* Response.swift */; };
+		79DC3172200A59CD0018B9A4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FA2000EA8900FAFD69 /* File.swift */; };
+		79DC3173200A59CD0018B9A4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FB2000EA8900FAFD69 /* Request.swift */; };
+		79DC3174200A59CD0018B9A4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FC2000EA8900FAFD69 /* Router.swift */; };
+		79DC3175200A59CD0018B9A4 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FD2000EA8900FAFD69 /* Regex.swift */; };
+		79DC3176200A59CD0018B9A4 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FE2000EA8900FAFD69 /* Url.swift */; };
+		79DC3177200A59CD0018B9A4 /* Server+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A6FF2000EA8900FAFD69 /* Server+Methods.swift */; };
+		79DC3178200A59CD0018B9A4 /* RequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7002000EA8900FAFD69 /* RequestParser.swift */; };
+		79DC3179200A59CD0018B9A4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7012000EA8900FAFD69 /* Helper.swift */; };
+		79DC317B200A59CD0018B9A4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7032000EA8900FAFD69 /* Route.swift */; };
+		79DC317C200A59CD0018B9A4 /* HttpSwift.h in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7042000EA8900FAFD69 /* HttpSwift.h */; };
+		79DC317D200A59CD0018B9A4 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7162000EAF100FAFD69 /* Family.swift */; };
+		79DC317E200A59CD0018B9A4 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7172000EAF100FAFD69 /* Protocol.swift */; };
+		79DC317F200A59CD0018B9A4 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7182000EAF100FAFD69 /* Error.swift */; };
+		79DC3180200A59CD0018B9A4 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A7192000EAF100FAFD69 /* Option.swift */; };
+		79DC3181200A59CD0018B9A4 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71A2000EAF100FAFD69 /* Type.swift */; };
+		79DC3182200A59CD0018B9A4 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71B2000EAF100FAFD69 /* OS.swift */; };
+		79DC3183200A59CD0018B9A4 /* TLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71D2000EAF100FAFD69 /* TLS.swift */; };
+		79DC3184200A59CD0018B9A4 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A71E2000EAF100FAFD69 /* Socket.swift */; };
+		79DC3185200A59CD0018B9A4 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30020069FDA001FE901 /* Speaker.swift */; };
+		79DC3186200A59CD0018B9A4 /* ServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30120069FDA001FE901 /* ServerHandler.swift */; };
+		79DC3187200A59CD0018B9A4 /* XmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30220069FDA001FE901 /* XmlParser.swift */; };
+		79DC3188200A59CD0018B9A4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADB30420069FDA001FE901 /* main.swift */; };
+		79DC318C200A62540018B9A4 /* invalidSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79DC318B200A62530018B9A4 /* invalidSettings.plist */; };
+		79DC318E200A63840018B9A4 /* invalidValues.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79DC318D200A63830018B9A4 /* invalidValues.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -128,10 +163,24 @@
 		79ADB30420069FDA001FE901 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		79ADB30B2006A022001FE901 /* com.heureka.speaker.agent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = com.heureka.speaker.agent.plist; sourceTree = "<group>"; };
 		79ADB30C2006A022001FE901 /* defaultSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = defaultSettings.plist; sourceTree = "<group>"; };
+		79DC3157200A4E050018B9A4 /* SettingsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLoader.swift; sourceTree = "<group>"; };
+		79DC3160200A57320018B9A4 /* speakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = speakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79DC3162200A57320018B9A4 /* speakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakerTests.swift; sourceTree = "<group>"; };
+		79DC3164200A57320018B9A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79DC3168200A585C0018B9A4 /* validSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = validSettings.plist; sourceTree = "<group>"; };
+		79DC318B200A62530018B9A4 /* invalidSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = invalidSettings.plist; sourceTree = "<group>"; };
+		79DC318D200A63830018B9A4 /* invalidValues.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = invalidValues.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7952A6E42000EA2000FAFD69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79DC315D200A57320018B9A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -145,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				7952A6E92000EA2000FAFD69 /* speaker */,
+				79DC3161200A57320018B9A4 /* speakerTests */,
 				7952A6E82000EA2000FAFD69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				7952A6E72000EA2000FAFD69 /* speaker */,
+				79DC3160200A57320018B9A4 /* speakerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,6 +277,7 @@
 				79ADB30120069FDA001FE901 /* ServerHandler.swift */,
 				79ADB30220069FDA001FE901 /* XmlParser.swift */,
 				79ADB30320069FDA001FE901 /* Settings.swift */,
+				79DC3157200A4E050018B9A4 /* SettingsLoader.swift */,
 				79ADB30420069FDA001FE901 /* main.swift */,
 			);
 			path = Speaker;
@@ -234,10 +286,22 @@
 		79ADB30A20069FEF001FE901 /* Plists */ = {
 			isa = PBXGroup;
 			children = (
-				79ADB30B2006A022001FE901 /* com.heureka.speaker.agent.plist */,
 				79ADB30C2006A022001FE901 /* defaultSettings.plist */,
+				79ADB30B2006A022001FE901 /* com.heureka.speaker.agent.plist */,
 			);
 			path = Plists;
+			sourceTree = "<group>";
+		};
+		79DC3161200A57320018B9A4 /* speakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				79DC318B200A62530018B9A4 /* invalidSettings.plist */,
+				79DC318D200A63830018B9A4 /* invalidValues.plist */,
+				79DC3168200A585C0018B9A4 /* validSettings.plist */,
+				79DC3162200A57320018B9A4 /* speakerTests.swift */,
+				79DC3164200A57320018B9A4 /* Info.plist */,
+			);
+			path = speakerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +327,23 @@
 			productReference = 7952A6E72000EA2000FAFD69 /* speaker */;
 			productType = "com.apple.product-type.tool";
 		};
+		79DC315F200A57320018B9A4 /* speakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79DC3165200A57320018B9A4 /* Build configuration list for PBXNativeTarget "speakerTests" */;
+			buildPhases = (
+				79DC315C200A57320018B9A4 /* Sources */,
+				79DC315D200A57320018B9A4 /* Frameworks */,
+				79DC315E200A57320018B9A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = speakerTests;
+			productName = speakerTests;
+			productReference = 79DC3160200A57320018B9A4 /* speakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -276,6 +357,10 @@
 					7952A6E62000EA2000FAFD69 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					79DC315F200A57320018B9A4 = {
+						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -293,9 +378,23 @@
 			projectRoot = "";
 			targets = (
 				7952A6E62000EA2000FAFD69 /* speaker */,
+				79DC315F200A57320018B9A4 /* speakerTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79DC315E200A57320018B9A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79DC3169200A585C0018B9A4 /* validSettings.plist in Resources */,
+				79DC318C200A62540018B9A4 /* invalidSettings.plist in Resources */,
+				79DC318E200A63840018B9A4 /* invalidValues.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7952A6E32000EA2000FAFD69 /* Sources */ = {
@@ -312,6 +411,7 @@
 				7952A75C2000EB7600FAFD69 /* Socket.swift in Sources */,
 				7952A7432000EB6E00FAFD69 /* ServerError.swift in Sources */,
 				7952A7442000EB6E00FAFD69 /* ErrorHandler.swift in Sources */,
+				79DC3158200A4E050018B9A4 /* SettingsLoader.swift in Sources */,
 				7952A7452000EB6E00FAFD69 /* Server.swift in Sources */,
 				7952A7462000EB6E00FAFD69 /* ResponseWriter.swift in Sources */,
 				7952A7472000EB6E00FAFD69 /* StaticServer.swift in Sources */,
@@ -330,6 +430,44 @@
 				79ADB30720069FDA001FE901 /* XmlParser.swift in Sources */,
 				79ADB30920069FDA001FE901 /* main.swift in Sources */,
 				79ADB30620069FDA001FE901 /* ServerHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79DC315C200A57320018B9A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79DC316C200A59CD0018B9A4 /* ServerError.swift in Sources */,
+				79DC316D200A59CD0018B9A4 /* ErrorHandler.swift in Sources */,
+				79DC316E200A59CD0018B9A4 /* Server.swift in Sources */,
+				79DC316F200A59CD0018B9A4 /* ResponseWriter.swift in Sources */,
+				79DC3170200A59CD0018B9A4 /* StaticServer.swift in Sources */,
+				79DC3171200A59CD0018B9A4 /* Response.swift in Sources */,
+				79DC3172200A59CD0018B9A4 /* File.swift in Sources */,
+				79DC3173200A59CD0018B9A4 /* Request.swift in Sources */,
+				79DC3174200A59CD0018B9A4 /* Router.swift in Sources */,
+				79DC3175200A59CD0018B9A4 /* Regex.swift in Sources */,
+				79DC3176200A59CD0018B9A4 /* Url.swift in Sources */,
+				79DC3177200A59CD0018B9A4 /* Server+Methods.swift in Sources */,
+				79DC3178200A59CD0018B9A4 /* RequestParser.swift in Sources */,
+				79DC3179200A59CD0018B9A4 /* Helper.swift in Sources */,
+				79DC317B200A59CD0018B9A4 /* Route.swift in Sources */,
+				79DC317C200A59CD0018B9A4 /* HttpSwift.h in Sources */,
+				79DC317D200A59CD0018B9A4 /* Family.swift in Sources */,
+				79DC317E200A59CD0018B9A4 /* Protocol.swift in Sources */,
+				79DC317F200A59CD0018B9A4 /* Error.swift in Sources */,
+				79DC3180200A59CD0018B9A4 /* Option.swift in Sources */,
+				79DC3181200A59CD0018B9A4 /* Type.swift in Sources */,
+				79DC3182200A59CD0018B9A4 /* OS.swift in Sources */,
+				79DC3183200A59CD0018B9A4 /* TLS.swift in Sources */,
+				79DC3184200A59CD0018B9A4 /* Socket.swift in Sources */,
+				79DC3185200A59CD0018B9A4 /* Speaker.swift in Sources */,
+				79DC3186200A59CD0018B9A4 /* ServerHandler.swift in Sources */,
+				79DC3187200A59CD0018B9A4 /* XmlParser.swift in Sources */,
+				79DC3188200A59CD0018B9A4 /* main.swift in Sources */,
+				79DC316B200A59570018B9A4 /* Settings.swift in Sources */,
+				79DC3163200A57320018B9A4 /* speakerTests.swift in Sources */,
+				79DC316A200A58FC0018B9A4 /* SettingsLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +607,34 @@
 			};
 			name = Release;
 		};
+		79DC3166200A57320018B9A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PD7JLCFGK9;
+				INFOPLIST_FILE = speakerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nomak.speakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		79DC3167200A57320018B9A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PD7JLCFGK9;
+				INFOPLIST_FILE = speakerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nomak.speakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +652,15 @@
 			buildConfigurations = (
 				7952A6EF2000EA2000FAFD69 /* Debug */,
 				7952A6F02000EA2000FAFD69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79DC3165200A57320018B9A4 /* Build configuration list for PBXNativeTarget "speakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79DC3166200A57320018B9A4 /* Debug */,
+				79DC3167200A57320018B9A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

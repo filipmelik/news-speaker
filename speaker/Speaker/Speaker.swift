@@ -76,15 +76,12 @@ class Speaker: NSObject, NSSpeechSynthesizerDelegate, MyXMLParserDelegate {
         speech.rate = rate
     }
     
-    //set current synthetizer's configuration into Settings object and store it into plist
-    func setCurrentConfigIntoSettings() -> Bool {
+    //set current synthetizer's configuration into Settings object
+    func setCurrentConfigIntoSettings() {
         settings.volume = speech.volume
         settings.voice = speech.voice()
         settings.rate = speech.rate
         settings.rss = rss
-        
-        //store settings into Settings.plist
-        return settings.saveSettings()
     }
     
     //synthetize message
@@ -97,6 +94,7 @@ class Speaker: NSObject, NSSpeechSynthesizerDelegate, MyXMLParserDelegate {
         speech.startSpeaking(message)
     }
     
+    //Say error message and write it to output
     func sayError(error: String, message: String) {
         NSLog("%@", error)
         speak(message: message)

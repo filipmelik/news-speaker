@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RSS</key>
+	<date>2018-01-13T15:58:38Z</date>
+	<key>Rate</key>
+	<data>MA==</data>
+	<key>Volume</key>
+	<string>1</string>
+	<key>Voice</key>
+	<integer>0</integer>
+	<key>Jingles</key>
+	<date>2018-01-13T15:59:07Z</date>
+	<key>ExtraItem</key>
+	<integer>5</integer>
+</dict>
+</plist>

@@ -8,6 +8,8 @@
 
 import Foundation
 
+//Parse command line arguments, if more then one are present,
+// use the first one as a path to settings plist
 func parseCommandLineArguments () -> String? {
     if (CommandLine.arguments.count >= 2) {
         return CommandLine.arguments[1]
@@ -16,9 +18,12 @@ func parseCommandLineArguments () -> String? {
     return nil
 }
 
+//parse command line arguments
 let settingsPath = parseCommandLineArguments()
+
 //load settings from Settings.plist
-let settings = Settings(plistPath: settingsPath)
+let settingsLoader = SettingsLoader(plistPath: settingsPath)
+let settings = settingsLoader.loadSettings()
 
 //create speaker instance
 let speaker = Speaker(settings: settings)
