@@ -102,8 +102,8 @@ class Speaker: NSObject, NSSpeechSynthesizerDelegate, MyXMLParserDelegate {
     
     //start parsing xml from rss feed
     func readRss() -> Bool{
-        if (settings.rss != nil) {
-            xmlParser.startParsingWithContentsOfURL(rssURL: settings.rss!)
+        if let rss = settings.rss {
+            xmlParser.startParsingWithContentsOfURL(rssURL: rss)
             return true
             
         } else {

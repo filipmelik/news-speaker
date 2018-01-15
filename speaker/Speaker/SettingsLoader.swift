@@ -19,17 +19,17 @@ class SettingsLoader: NSObject {
        super.init()
         
         //plist specified
-        if (plistPath != nil) {
+        if let plistPath = plistPath{
             
             plistSpecified = true
             
             //check if file exists
-            if (!fileExists(path: plistPath!)) {
+            if (!fileExists(path: plistPath)) {
                 path = Settings.DefaultValue.defaultPlistPath
-                NSLog("Settings plist file: \"%@\" does not exist.", plistPath!)
+                NSLog("Settings plist file: \"%@\" does not exist.", plistPath)
             } else {
                 plistSpecifiedExists = true
-                path = plistPath!
+                path = plistPath
             }
         //plist not specified, use default path
         } else {

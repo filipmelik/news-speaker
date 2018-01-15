@@ -125,12 +125,11 @@ class ServerHandler: NSObject {
             var result = ""
             
             //check voice parameter
-            let voice = request.queryParams["voice"]
-            if (voice != nil){
-                if (!self.speaker.setVoice(name: voice!)) {
+            if let voice = request.queryParams["voice"]{
+                if (!self.speaker.setVoice(name: voice)) {
                     result = "Voice could not be changed. Check \"/voices\" to see all available voices.\n"
                 } else {
-                    result = "Setting voice: " + voice! + "\n"
+                    result = "Setting voice: " + voice + "\n"
                 }
             }
             

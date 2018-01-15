@@ -31,6 +31,11 @@ class Settings: NSObject {
     
     //Create dictionary with current settings to be written into plist
     func createDictionary() -> Dictionary<String, AnyObject> {
-        return ["Volume": volume as NSNumber, "Voice": NSString(string: (voice?.rawValue ?? "")) , "Rate": rate as NSNumber, "RSS": NSString(string: (rss?.absoluteString ?? "")), "Port": port as NSNumber, "Jingles": useJingles as NSNumber]
+        return ["Volume": volume as NSNumber,
+                "Voice": NSString(string: (voice?.rawValue ?? "")) ,
+                "Rate": rate as NSNumber,
+                "RSS": NSString(string: (rss?.absoluteString ?? "")),
+                "Port": port as NSNumber,
+                "Jingles": useJingles as NSNumber]
     }
 }
