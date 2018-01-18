@@ -9,10 +9,7 @@
 import Foundation
 
 
-
 class MyXMLParser: NSObject, XMLParserDelegate {
-    
-    
     
     var arrParsedData = [Dictionary<String, String>]()
     
@@ -27,9 +24,10 @@ class MyXMLParser: NSObject, XMLParserDelegate {
     func startParsingWithContentsOfURL(rssURL: URL) {
         if let parser = XMLParser(contentsOf: rssURL) {
             parser.delegate = self
-            parser.parse()
+            if !(parser.parse()){
+                delegate?.parsingFinishedWithError()
+            }
         }
-        
     }
     
     func parser(_ parser: XMLParser,
@@ -38,13 +36,11 @@ class MyXMLParser: NSObject, XMLParserDelegate {
                 qualifiedName qName: String?,
                 attributes attributeDict: [String : String] = [:])
     {
-        
         currentElement = elementName
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if !foundCharacters.isEmpty {
-            
             currentDataDictionary[currentElement] = foundCharacters
             
             foundCharacters = ""
@@ -57,12 +53,12 @@ class MyXMLParser: NSObject, XMLParserDelegate {
     
 
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
-        print(parseError)
+        delegate?.parsingFinishedWithError()
     }
     
     
     func parser(_ parser: XMLParser, validationErrorOccurred validationError: Error) {
-        print(validationError)
+        delegate?.parsingFinishedWithError()
     }
     
     // MARK: XMLParserDelegate
@@ -81,4 +77,6 @@ class MyXMLParser: NSObject, XMLParserDelegate {
 
 protocol MyXMLParserDelegate{
     func parsingWasFinished()
+    
+    func parsingFinishedWithError()
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RSS</key>
+	<string>http://servis.idnes.cz/rss.aspx?c=zpravodaj</string>
+	<key>Rate</key>
+	<integer>188</integer>
+	<key>Volume</key>
+	<real>0.67</real>
+	<key>Voice</key>
+	<string>com.apple.speech.synthesis.voice.yuri</string>
+	<key>Jingles</key>
+	<true/>
+	<key>Port</key>
+	<integer>1234</integer>
+</dict>
+</plist>
